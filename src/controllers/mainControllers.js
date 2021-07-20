@@ -7,7 +7,7 @@ module.exports={
 
     },
     detail : (req,res) =>{
-       let plato =platos.find(e => e.id == req.params.id)
+       let plato =platos.find(e => e.id === +req.params.id)
         res.render('detalleMenu',{plato})
     }
 }
